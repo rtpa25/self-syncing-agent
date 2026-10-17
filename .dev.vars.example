@@ -1,5 +1,6 @@
 ANTHROPIC_API_KEY=<your-anthropic-api-key>
-PARALLEL_API_KEY=<your-parallel-api-key>
+# Optional: leave empty for free Parallel Search MCP; set a key for SDK agentic search.
+PARALLEL_API_KEY=
 PUBLIC_BASE_URL=<your-public-base-url>
 PIPEDREAM_PROJECT_ID=<your-pipedream-project-id>
 PIPEDREAM_CLIENT_ID=<your-pipedream-client-id>

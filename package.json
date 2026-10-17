@@ -26,6 +26,7 @@
     "@ai-sdk/anthropic": "^3.0.71",
     "@cloudflare/ai-chat": "^0.4.4",
     "@cloudflare/kumo": "^1.18.0",
+    "@modelcontextprotocol/sdk": "1.29.0",
     "@phosphor-icons/react": "^2.1.10",
     "@pipedream/sdk": "^2.4.6",
     "@streamdown/code": "^1.1.1",

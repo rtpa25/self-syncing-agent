@@ -160,7 +160,14 @@ The security model treats the handler as hostile and trusts only the supervisor-
 
 - Cloudflare account on the Workers Paid plan ($5/mo) — needed for Durable Objects + Worker Loader.
 - Pipedream account (free tier works for dev).
-- Anthropic API key; Parallel AI key; Firecrawl key.
+- Anthropic API key; Firecrawl key.
+
+`web_search` uses free [Parallel Search MCP](https://docs.parallel.ai/integrations/mcp/search-mcp)
+in Fast mode when `PARALLEL_API_KEY` is unset or empty. No Parallel account or API
+key is needed for exploration and light use; anonymous usage has rate limits.
+Set `PARALLEL_API_KEY` to keep authenticated SDK agentic search, including its
+existing excerpt settings. A configured key's errors are reported directly.
+`fetch_docs` continues to use Firecrawl and requires its key.
 
 **Steps**
 
@@ -170,7 +177,7 @@ cd self-syncing-agent
 pnpm install
 
 cp .dev.vars.example .dev.vars
-# fill in: ANTHROPIC_API_KEY, PARALLEL_API_KEY, FIRECRAWL_API_KEY,
+# fill in: ANTHROPIC_API_KEY, FIRECRAWL_API_KEY,
 #         PIPEDREAM_CLIENT_ID, PIPEDREAM_CLIENT_SECRET, PUBLIC_BASE_URL
 
 pnpm dev        # local dev
